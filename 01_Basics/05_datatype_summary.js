@@ -13,11 +13,24 @@ let userEmail;
 
 const id = Symbol('123')
 const anotherId = Symbol('123')
-console.log(id === anotherId);
+//console.log(id === anotherId);
 
 //must read for interview prepartion (typeof) results for primitive and non primitive datatypes
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 
 
 const bigNumber = 12345678909876543245667786567877n
-console.log(typeof bigNumber);
+//console.log(typeof bigNumber);
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+// Stack(Primitive) , Heap(Non-Primitive)
+
+let myYoutubeName = "shubhamratandotcom "
+
+let anotherName = myYoutubeName
+anotherName = "pradeepRatan"
+console.log(anotherName);
+console.log(myYoutubeName);
+
+
