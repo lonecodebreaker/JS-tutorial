@@ -33,4 +33,17 @@ anotherName = "pradeepRatan"
 console.log(anotherName);
 console.log(myYoutubeName);
 
+let userOne = {
+    email:"shubham@gmail.com",
+    upi:"user@ybl"
+}
+
+let userTwo = userOne;
+userTwo.email = "usertwo@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
+
+
 
