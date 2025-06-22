@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Diagram</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .array {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            margin: 5px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            border: 2px solid black;
+        }
+        .unsorted {
+            background-color: lightcoral;
+        }
+        .sorted {
+            background-color: lightgreen;
+        }
+        .label {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2> UnSorted array - <h3><span style="background-color: #FFFF00">Take 4 as pivot here </span></h3></h2>
+    <div class="array">
+        <div class="box unsorted">4</div>
+        <div class="box unsorted">6</div>
+        <div class="box unsorted">2</div>
+        <div class="box unsorted">5</div>
+        <div class="box unsorted">7</div>
+        <div class="box unsorted">9</div>
+        <div class="box unsorted">1</div>
+        <div class="box unsorted">3</div>
+
+    </div>
+    
+
+    <h2> Sorted Array to be achieved by quickSort - <h3> <span style="background-color: #FFFF00">Correct position for each element</span></h3></h2>
+    <div class="array">
+        <div class="box sorted">1</div>
+        <div class="box sorted">2</div>
+        <div class="box sorted">3</div>
+        <div class="box sorted">4</div>
+        <div class="box sorted">5</div>
+        <div class="box sorted">6</div>
+        <div class="box sorted">7</div>
+        <div class="box sorted">9</div>
+
+    </div>
+    
+    <h2> UnSorted array after quickSort run one time - <h3><span style="background-color: #FFFF00"> pivot 4 at its Correct place </span></h3></h2>
+    <div class="array">
+        <div class="box unsorted">2</div>
+        <div class="box unsorted">1</div>
+        <div class="box unsorted">3</div>
+        <div class="box sorted">4</div>
+        <div class="box unsorted">6</div>
+        <div class="box unsorted">5</div>
+        <div class="box unsorted">7</div>
+        <div class="box unsorted">9</div>
+
+    </div>
+
+
+</body>
+</html>
