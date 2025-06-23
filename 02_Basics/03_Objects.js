@@ -21,7 +21,7 @@ const jsUser = {
 
 //jsUser.email = "shuham@microsoft.com"
 //Object.freeze(jsUser)
-// object freezed so further changes applies to it 
+// object freezed so further changes don't applies to it 
 //jsUser.email = "shubham@chatgpt.com"
 //console.log(jsUser)
 
