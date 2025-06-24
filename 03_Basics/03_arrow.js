@@ -53,7 +53,7 @@ const addTwo = (num1 , num2 ) => {
 }
 
 // implicit return arrow function
-const addTwo = ( num1 , num2) => ( num1 + num2 )  
+const addTwoAgain = ( num1 , num2) => ( num1 + num2 )  
 console.log(addTwo(3,5));
 
 // implicitly returning object
