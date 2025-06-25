@@ -25,9 +25,8 @@ mongo()
     console.log(`DB connected thrice`);
 })()
 
-putting parameter and doing string interpolation too
+//putting parameter and doing string interpolation too
 
 ((name) => {
     console.log(`${name},DB connected twice`);
 })("Shubham")
-
