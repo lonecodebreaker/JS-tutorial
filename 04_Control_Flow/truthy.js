@@ -37,3 +37,27 @@ const emptyObj =  {}
 if(Object.keys(emptyObj).length === 0 ){
       console.log(" object is empty ");
 }
+
+// if you see in developer mode in browser console
+// false == 0 // output = true
+// false == '' // output =  true
+// 0 == '' // output = true
+
+
+// Nullish Coalescing Operator (??) : numm undefined
+// this logical opertaor is for special case when we get response from database as null or undefined , in that case it knows what to do in that case
+
+let val1;
+//val1 = 5 ?? 10   // output = 5
+//val1 = null ?? 10  // output = 10 , as if another one have some value or it will assign null to val1 
+//val1 = undefined ?? 15 // same as above
+val1 = null ?? 10 ?? 15  // output = 10 ,here it will print any first value it will get after null 
+console.log(val1);
+
+//Ternary operator
+// synatax => condition ? true : false
+
+const iceTeaPrice  = 100;
+iceTeaPrice <= 80 ? console.log("less than 80") : console.log("more than 80 ");
+
+
