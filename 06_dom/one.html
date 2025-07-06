@@ -1,0 +1,31 @@
+// What is Dom ?
+// Dom is document object model
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: rgb(110, 104, 104);
+            color: white
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div class="bg-black">
+         <h1 id="title" class="heading">DOM learning today</h1> 
+         <p>Lorem ipsum dolor sit amet </p>
+    </div>
+</body>
+</html> 
+
+// 1. console.log(window) // here inside window we have many things like jQuery , location
+2. console.log(window.document) // here we only have all in some html tags 
+3. console.log(document) // here browser understand whenever we write this , we mean 2nd
+4. console.dir(document)  // if you want to access jquery and location and all without window object you can do with this.
+
+// document.getElementById('firstName') // its selecting and seeing the element
+// manipulating whatever id = firstName have in it.
+document.getElementById('firstName').innerHTML("Shubham Ratan") // it will change whatever inside the element to "Shubham Ratan"
