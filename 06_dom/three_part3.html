@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Learning </title>
+</head>
+<body style = "background-color: #562f2f ; color: white;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName) {
+        const list = document.createElement('li')
+        list.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(list)
+    }
+    addLanguage("Java");
+    addLanguage("TypeScript")
+
+    function addOptiLanguage(langName){
+        const list = document.createElement('li')
+        list.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(list)
+    }
+    addOptiLanguage("Golang")
+
+
+    //Edit the list item in dom
+    const secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang);
+    //secondLang.innerHTML = "Mojo"
+    const newLi = document.createElement('li')
+    newLi.textContent = "Mojo"
+    secondLang.replaceWith(newLi)
+
+    //Edit example 2 
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = "<li>Java</li>"
+
+    //removing element 
+    const remLang = document.querySelector("li:nth-child(2)")
+    remLang.remove()
+
+</script>
+</html>
