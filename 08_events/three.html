@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronus JavaScript</title>
+</head>
+
+<body>
+    <h1 id="name">Shubham is FullStack Dev </h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+
+    const datePrint = function (str) {
+        console.log(str, Date.now());
+    }
+
+    let printingDate;
+    document.querySelector('#start').addEventListener('click', function () {
+        printingDate = setInterval(datePrint, 1000, "Shubham");
+    })
+
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearInterval(printingDate)
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronus JavaScript</title>
+</head>
+
+<body>
+    <h1 id="name">Shubham is the Best </h1>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+
+    // setTimeout(function(){
+    //     console.log("Shubham");
+    // },2000)
+
+    // const sayName = function () {
+    //     console.log("Shubham");
+    // }
+    // setTimeout(sayName, 2000)
+
+    // will Log in console that 5 second is passed to check that clearTimeout on changeH1 is working or not?
+    setTimeout(function(){
+        console.log("5 second passed");
+    },5000)
+
+    const changeText = function () {
+        document.querySelector('#name').innerHTML = "Shubham is Born to be Great"
+    }
+    const changeH1 = setTimeout(changeText, 5000)
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeH1);
+        console.log("Now H1 will not change as stop button is clicked");
+    })
+
+
+</script>
+
+</html>
