@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>clickMe</button>
+</body>
+<script>
+       
+     class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://127.0.0.1:5500/"
+
+            document
+            .querySelector('button')
+            .addEventListener('click', this.handleClick.bind(this))
+
+            // .addEventListener('click', this.handleClick ) --> wrong way , it will not acess the server in class , when invoked instead give undefined as its context is button not class context .
+        }
+
+  // requirement
+  // As soon as page loads the object of React gets formed.
+  // We get the reference of button and have method handleClick that triggeres the message like , button is clicked or form is submitted 
+
+        handleClick(){
+            console.log(" Button has been clicked ");
+            console.log(this.server);
+        }
+     }
+
+     const app  = new React();
+</script>
+</html>
