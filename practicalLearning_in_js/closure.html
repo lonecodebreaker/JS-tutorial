@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+
+<body>
+   <button id="green">Green</button>
+   <button id="yellow">Yellow</button>
+</body>
+<script>
+    // lexical scope example 
+    function init() {
+        let name = "Mozilla";
+        function displayName() {
+            console.log(name);
+        }
+        displayName();
+    }
+    init();
+
+    // try to run lexical scope and closure example seprateley , by commenting the code of former .
+
+    // closure
+
+    function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+            console.log(name);
+        }
+        return displayName;
+    }
+
+    const myFunc = makeFunc();
+    myFunc();  // output will be Mozilla .
+</script>
+
+<script>
+    // lexical scope and closure real world practical example
+
+    // Now for doing for more buttons say 500 , we have to do this on repeat mode which voiltas DRY(dont repeat yourself ) principle.
+    // document.getElementById('green').onclick = function(){
+    //     document.body.style.backgroundColor = "green"
+    // }
+    // document.getElementById('yellow').onclick = function(){
+    //     document.body.style.backgroundColor = "yellow"
+    // }
+
+    // Second approach without voilating DRY and we dont have to repeat the inside of function manually everytime, selecting elemnt can be done manually or loop
+    // function clickHandler(color){
+    //   document.body.style.backgroundColor = `${color}`
+    // }
+
+    // document.getElementById('green').onclick = clickHandler // will not run as onclick need a executable
+    // document.getElementById('green').onclick = clickHandler("green"); // will not work desired either as it will not wait to be clicked 
+    
+
+    // Third final approach 
+    function clickHandler(color){
+
+        return function(){
+           document.body.style.backgroundColor = `${color}` 
+        }
+    }
+
+    document.getElementById('green').onclick = clickHandler("green");
+    document.getElementById('yellow').onclick = clickHandler("yellow");
+
+    
+</script>
+
+</html>
